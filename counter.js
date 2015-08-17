@@ -1,26 +1,25 @@
 /*
 *  Counter.js  - written by Victor N - 22/Nov/2013 - www.vitim.us
 */
-
 function Counter(counterElement){
-	
-	this.pos;
-	this.values = [0,1,2,3,4,5,6,7,8,9];
+  
+	this.pos = 0;
+	this.values = ['0','1','2','3','4','5','6','7','8','9'];
 	
 	this.options = {
 		mousewheel: true,
 		digitHeight: 0,
 		inverted: false	
-	}
+	};
 	
 	this.DOM = {
 		counter : counterElement,
 		wheel : document.createElement('div'),
 		digitAbove : document.createElement('div'),
 		digitCenter : document.createElement('div'),
-		digitBelow : document.createElement('div'),
-	}
-			
+		digitBelow : document.createElement('div')
+	};
+		
 	//Initial Values
 	if(this.DOM.counter.innerHTML.indexOf('|')>-1){
 		this.values = this.DOM.counter.innerHTML.split('|');
@@ -54,14 +53,16 @@ Counter.prototype.setValue = function(value){
 	var pos = this.values.indexOf(value);
 	if(pos>=0) return this.setPos(pos);
 	else throw new Error('"'+value+'" is not a item on Counter.values[]');
-}
+};
+
 Counter.prototype.getValue = function(){
 	return this.values[this.pos];
-}
+};
 
 Counter.prototype.getPos = function(){
 	return this.pos;	
-}
+};
+
 Counter.prototype.setPos = function(x){
 	
 	//function that cycle values between 0..max
@@ -95,7 +96,7 @@ Counter.prototype.setPos = function(x){
 	}
 	
 	return this.pos;
-}
+};
 
 Counter.prototype.moveBy = function(x){
 	var self = this;
@@ -121,7 +122,7 @@ Counter.prototype.moveBy = function(x){
 			self.DOM.wheel.style.top = "0px";
 		},0);
 	}
-}
+};
 
 Counter.prototype.moveTo = function(pos){
 	
@@ -138,16 +139,16 @@ Counter.prototype.moveTo = function(pos){
 		var cur = this.setPos(pos);
 		
 	}
-}
+};
 
 
 Counter.prototype.next = function(){
 	this.moveBy(1);
-}
+};
 
 Counter.prototype.previous = function(){	
 	this.moveBy(-1);
-}
+};
 
 Counter.prototype.mouseWheel = function(){
 	
@@ -160,7 +161,7 @@ Counter.prototype.mouseWheel = function(){
 		if(self.options.mousewheel==false) return;
 		
 		// cross-browser wheel delta
-		var e = window.event || e; // old IE support
+		e = window.event || e; // old IE support
 		e.preventDefault();
 		
 		var now = Date.now();
@@ -192,5 +193,5 @@ Counter.prototype.mouseWheel = function(){
 		
 		//console.log("timestamp %s \t dif: %s \t deltaMode: %s \t inverted: %s \t wheelDelta: %s \t delta: %s \t x: %d",
 		//			e.timeStamp, dif, e.deltaMode, e.webkitDirectionInvertedFromDevice, e.wheelDelta, delta, wheel);
-	}
-}
+	};
+};
