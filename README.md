@@ -3,6 +3,8 @@
 This is a proof of concept element, inspired by the UIKit [PickerView](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/UIPickerView.html)
 It is mainly designed to be a display read-only kind of component, but it also could be used as input using the mouse-wheel. Direct manipulation by touch or mouse drag are not present at the moment.
 
+[DEMO](http://liveweave.com/R6sali)
+
 
 To create a analog-counter-wheel component you just need a div 
 
