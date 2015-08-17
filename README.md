@@ -13,49 +13,50 @@ This will instantiate a new component and initialize it.
 ##Public API
 
 
-`Counter.pos;`
-> Current Position
+- Counter.**pos**
+> [Integer] Current Index Position
 
-`Counter.values = [0,1,2,3,4,5,6,7,8,9];`
-> Array of the possible values
+- Counter.**values**
+> [Array] of the possible values
+>  e.g.:`["A","B","C","D","E","F"];`
 
 
 ### Options
 
-`Counter.options.mousewheel`
-> [boolean] enable mouse wheel manipulation
+- Counter.**options.mousewheel**
+>[boolean] enable mouse wheel manipulation  
 
-`Counter.options.digitHeight`
-> [Integer] height in pixels of a single digit
+- Counter.**options.digitHeight** 
+>[Integer] height in pixels of a single digit  
 
-`Counter.options.inverted`
-> [boolean] invert direction
+- Counter.**options.inverted** 
+>[boolean] invert direction  
 
 ### Methods
 
-Counter.prototype.setValue(value)
+- Counter.prototype.**setValue(String value)**
+> Set the position to the position of the String value
+
+- Counter.prototype.**getValue()**
+> returns the String value of the current position
+
+- Counter.prototype.**setValue(String value)**
 > Set the position to the position of the value
 
-Counter.prototype.getValue()
-> returns the value of the current position
-
-Counter.prototype.setValue(value)
-> Set the position to the position of the value
-
-Counter.prototype.getPos()
+- Counter.prototype.**getPos()**
 > returns the current index position
 
-Counter.prototype.setPos (index)
+- Counter.prototype.**setPos (int index)**
 > Set the position to the specified index
 
-Counter.prototype.moveBy(x)
+- Counter.prototype.**moveBy(int x)**
 > Move by the specified amount (positive or negative)
 
-Counter.prototype.moveTo(pos)
+- Counter.prototype.**moveTo(int pos)**
 > Move to the specified index position
 
-Counter.prototype.next()
+- Counter.prototype.**next()**
 > Increase the position by one
 
-Counter.prototype.previous(pos)
+- Counter.prototype.**previous(int pos)**
 > Reduce the position by 1
