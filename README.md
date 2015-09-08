@@ -12,53 +12,54 @@ To create a analog-counter-wheel component you just need a div
 
 This will instantiate a new component and initialize it.
 
-##Public API
+## Public API
 
+### Properties
 
 - Counter.**pos**
-> [Integer] Current Index Position
+  > [Integer] Current Index Position
 
 - Counter.**values**
-> [Array] of the possible values
->  e.g.:`["A","B","C","D","E","F"];`
+  > [Array] of the possible values  
+  >  e.g.:`["A","B","C","D","E","F"];`
 
 
-### Options
+#### Options
 
 - Counter.**options.mousewheel**
->[boolean] enable mouse wheel manipulation  
+  >[boolean] enable mouse wheel manipulation  
 
 - Counter.**options.digitHeight** 
->[Integer] height in pixels of a single digit  
+  >[Integer] height in pixels of a single digit  
 
 - Counter.**options.inverted** 
->[boolean] invert direction  
+  >[boolean] invert direction  
 
 ### Methods
 
 - Counter.prototype.**setValue(String value)**
-> Set the position to the position of the String value
+  > Set the position to the position of the String value
 
 - Counter.prototype.**getValue()**
-> returns the String value of the current position
+  > returns the String value of the current position
 
 - Counter.prototype.**setValue(String value)**
-> Set the position to the position of the value
+  > Set the position to the position of the value
 
 - Counter.prototype.**getPos()**
-> returns the current index position
+  > returns the current index position
 
 - Counter.prototype.**setPos (int index)**
-> Set the position to the specified index
+  > Set the position to the specified index
 
 - Counter.prototype.**moveBy(int x)**
-> Move by the specified amount (positive or negative)
+  > Move by the specified amount (positive or negative)
 
 - Counter.prototype.**moveTo(int pos)**
-> Move to the specified index position
+  > Move to the specified index position
 
 - Counter.prototype.**next()**
-> Increase the position by one
+  > Increase the position by one
 
 - Counter.prototype.**previous(int pos)**
-> Reduce the position by 1
+  > Reduce the position by 1
