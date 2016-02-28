@@ -1,5 +1,6 @@
-/*
-*  Counter.js  - written by Victor N - 22/Nov/2013 - www.vitim.us
+/**
+* Counter.js  - written by Victor N - 22/Nov/2013 - www.vitim.us
+* Repo: https://github.com/victornpb/analog-counter-wheel
 */
 function Counter(counterElement){
   
